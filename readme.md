@@ -5,9 +5,11 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
-segundo_componente_do_grupo:email_segundo_componente@dominio.com<br>
-...<br>
+Daniel da Silva Lippaus: lippaus18@gmail.com<br>
+Daniel Oliveira Lemos: danielolemos10@gmail.com<br>
+Lorenzzo Gabriel Ramos Doelinger Oliveira: lorenzzooliveira7@gmail.com<br>
+Rodolfo Müller do Amaral: amaralrodolfo38@gmail.com<br>
+<br>
 
 
 ### 2.MINI-MUNDO<br>
