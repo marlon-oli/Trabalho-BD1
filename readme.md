@@ -15,7 +15,7 @@ Rodolfo Müller do Amaral: amaralrodolfo38@gmail.com<br>
 ### 2.MINI-MUNDO<br>
 Descrição textual das regras de negócio definidas como um subconjunto do mundo real cujos elementos são propriedades que desejamos incluir, processar, armazenar, gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 
-> O sistema proposto para a SERVTEC Energia Solar conterá as informacões aqui detalhadas. Dos orçamentos serão armazenados o número, o nome do cliente, seu endereço, o seu representante comercial, a pessoa que o indicou, o gasto médio mensal, a quantidade de kWh sugerida para o cliente, o número de parcelas do financiamento, o custo total do projeto e o seu status. Dos representantes comerciais serão armazenados o nome e o número de telefone. Cada representante comercial pode ter vários orçamentos relacionados ao seu nome. Um orçamento pode ser aprovado, reprovado ou arquivado.
+> O sistema proposto para a SERVTEC Energia Solar conterá as informacões aqui detalhadas. Dos orçamentos serão armazenados o número, o nome do cliente, seu endereço, o seu representante comercial, a pessoa que o indicou, o gasto médio mensal, a quantidade de kWh sugerida para o cliente, o número de parcelas do financiamento, o custo total do projeto, o seu status, a data de atualização do status e a data de confecção do orçamento. Dos representantes comerciais serão armazenados o nome e o número de telefone. Cada representante comercial pode ter vários orçamentos relacionados ao seu nome. Um orçamento pode ser aprovado, reprovado ou arquivado.
 
 ### 3.PERGUNTAS A SEREM RESPONDIDAS<br>
 #### 3.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
