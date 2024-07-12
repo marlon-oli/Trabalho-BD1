@@ -22,7 +22,7 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informações? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
-> A Empresa SERVTEC Energia Solar precisa inicialmente dos seguintes relatórios:
+> A Empresa SERVTEC Energia Solar precisa inicialmente dos seguintes relatórios sobre orçamentos, projetos e representantes:
 * Relatório que mostre a quantidade de orçamentos aprovados em determinada época do ano.
 * Relatório que mostre qual a região com mais pedidos de orçamento.
 * Relatório que mostre quantos projetos são feitos por semestre.
