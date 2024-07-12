@@ -24,13 +24,10 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
     
 > A Empresa SERVTEC Energia Solar precisa inicialmente dos seguintes relatórios:
 * Relatório que mostre a quantidade de orçamentos aprovados em determinada época do ano.
-*
-*
-*
-*
-
->> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo.  <br>  c) Observe que para entregar os relatórios propostos, todos os atributos necessários nos relatórios deverão existir ou derivar de atributos existentes.
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa. 
+* Relatório que mostre qual a região com mais pedidos de orçamento.
+* Relatório que mostre quantos projetos são feitos por semestre.
+* Relatório que mostre a quantidade de projetos aprovados, reprovados e arquivados por semestre.
+* Relatório que mostre qual representante mais fez orçamentos por semestre.
 
     
 ### 5.MODELO CONCEITUAL<br>
