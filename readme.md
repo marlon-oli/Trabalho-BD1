@@ -40,8 +40,9 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
         e tuplas falsas (Aplicar os conceitos de normalização abordados).   
         
-![Alt text](![image](https://github.com/user-attachments/assets/91c89fbc-c043-42bc-98ce-63d6c6b27118))
-    
+![Alt text](![image](https://github.com/user-attachments/assets/b2de9043-8f4e-45e6-a4f4-fb6a06521c2b)
+
+
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
