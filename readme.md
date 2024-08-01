@@ -91,8 +91,64 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
         (não serão aceitos modelos que não estejam em conformidade)
 
 ### 7	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
+	-- Criação da tabela CLIENTE
+	CREATE TABLE CLIENTE (
+	    ClienteID INT PRIMARY KEY,
+	    Nome VARCHAR(255) NOT NULL,
+	    Endereco VARCHAR(255) NOT NULL,
+	    Email VARCHAR(255) NOT NULL,
+	    Telefone VARCHAR(20) NOT NULL,
+	    CPF VARCHAR(20) NOT NULL
+	);
+	
+	-- Criação da tabela REPRESENTANTE_COMERCIAL
+	CREATE TABLE REPRESENTANTE_COMERCIAL (
+	    RepresentanteID INT PRIMARY KEY,
+	    Nome VARCHAR(255) NOT NULL,
+	    Telefone VARCHAR(20) NOT NULL
+	);
+	
+	-- Criação da tabela ORCAMENTOS
+	CREATE TABLE ORCAMENTOS (
+	    OrcamentoID INT PRIMARY KEY,
+	    ValorParcelasPropostas DECIMAL(10, 2) NOT NULL,
+	    ValorProjetoAVista DECIMAL(10, 2) NOT NULL,
+	    Numero INT NOT NULL,
+	    Status VARCHAR(50) NOT NULL,
+	    NomeCliente VARCHAR(255) NOT NULL,
+	    DataAtualizacaoStatus DATE NOT NULL,
+	    RepresentanteComercial INT,
+	    DataDeConfecao DATE NOT NULL,
+	    PessoaQueIndicou VARCHAR(255),
+	    TipoDePadraoDeEnergia VARCHAR(255),
+	    GastoMedioMensal DECIMAL(10, 2),
+	    QuantidadePaineisQueOInversorSuporta INT,
+	    QuantidadeWhSugerida DECIMAL(10, 2),
+	    PotenciaMediaMensal DECIMAL(10, 2),
+	    NumeroDeParcelas INT,
+	    EconomiaTotalEm25Anos DECIMAL(10, 2),
+	    AreaMediaDosModulos DECIMAL(10, 2),
+	    CONSTRAINT FK_RepresentanteComercial FOREIGN KEY (RepresentanteComercial) REFERENCES REPRESENTANTE_COMERCIAL(RepresentanteID)
+	);
+	
+	-- Relacionamento entre CLIENTE e ORCAMENTOS
+	CREATE TABLE Possui (
+	    ClienteID INT,
+	    OrcamentoID INT,
+	    PRIMARY KEY (ClienteID, OrcamentoID),
+	    CONSTRAINT FK_Cliente FOREIGN KEY (ClienteID) REFERENCES CLIENTE(ClienteID),
+	    CONSTRAINT FK_Orcamento FOREIGN KEY (OrcamentoID) REFERENCES ORCAMENTOS(OrcamentoID)
+	);
+	
+	-- Relacionamento entre ORCAMENTOS e REPRESENTANTE_COMERCIAL
+	CREATE TABLE Associado (
+	    OrcamentoID INT,
+	    RepresentanteID INT,
+	    PRIMARY KEY (OrcamentoID, RepresentanteID),
+	    CONSTRAINT FK_Orcamento_Associado FOREIGN KEY (OrcamentoID) REFERENCES ORCAMENTOS(OrcamentoID),
+	    CONSTRAINT FK_Representante_Associado FOREIGN KEY (RepresentanteID) REFERENCES REPRESENTANTE_COMERCIAL(RepresentanteID)
+	);
+
 
       
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
