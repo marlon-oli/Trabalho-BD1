@@ -49,7 +49,38 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-    CLIENTE: Tabela que armazena as informações relativas ao cliente.
+    CLIENTE: Tabela que armazena as informações relativas aos clientes.
+    ClienteID (chave primária): Identificador único de cliente;
+    Nome: Nome completo do cliente;
+    Endereco: Endereço do cliente;
+    Email: E-mail do cliente;
+    Telefone: Telefone de contato do cliente;
+    CPF: Número de Cadastro de Pessoa Física do cliente.
+
+    ORÇAMENTOS: Tabela que armazena as informações relativas aos orçamentos realizados.
+    OrcamentoID (chave primária): Identificador único do orçamento;
+    ValorParcelasPropostas: Valor das parcelas propostas a partir da negociação;
+    ValorProjetoVista: Valor do projeto caso o pagamento seja feito à vista;
+    Numero: Número do projeto;
+    Status: Qual a situação atual do projeto (Iniciado, Em execução, Finalizado, Cancelado);
+    NomeCliente: Nome do cliente ao qual o orçamento está atrelado;
+    DataAtualizacaoStatus: Data da última atualização de status do projeto;
+    RepresentanteComercial: Nome do representante comercial que é responsável pelo orçamento;
+    DatadeConfeccao: Data em que o orçamento foi feito;
+    PessoaqueIndicou: Nome da pessoa que indicou a empresa para fazer o projeto;
+    TipodePadraodeEnergia: Tipo de padrão de energia do cliente;
+    GastoMedioMensal: Gasto médio mensal do cliente para poder dimensionar o aparelho de energia solar;
+    QuantidadedePaineisqueoInversorSuporta: Quantidade de painéis que o inversor suporta nessa instalação;
+    QuantidadekWhSugerida: Qual a quantidade de kWh sugerida para a instalação de acordo com os dados fornecidos pelo cliente;
+    PotenciaMediaMensal: Qual a potência média mensal fornecida pelo aparelho;
+    NumerodeParcelas: Número de parcelas estabelecidas para o orçamento;
+    EconomiaTotalem25Anos: Qual a economia total que o cliente terá em 25 anos se colocar as placas solares;
+    AreaMediadosModulos: Qual a área média de ocupação dos módulos da instalação.
+
+    REPRESENTANTE COMERCIAL:
+    RepresentanteID (chave primária): Identificador único do representante comercial;
+    Nome: Nome completo do representante comercial;
+    Telefone: Telefone de contato do representante comercial.
     
 
 ># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
