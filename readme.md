@@ -1,4 +1,4 @@
-# TRABALHO 01:  Diligenciamento de Pedidos para Manutenção de Equipamentos
+# TRABALHO 02:  Diligenciamento de Pedidos para Manutenção de Equipamentos
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
@@ -125,6 +125,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 ### 8   INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) Script das instruções relativas a inclusão de dados
         
+-- Dropar tabelas existentes
 DROP TABLE IF EXISTS ITENS_PEDIDO;
 DROP TABLE IF EXISTS ORDEM_COMPRA;
 DROP TABLE IF EXISTS PEDIDO;
@@ -132,6 +133,13 @@ DROP TABLE IF EXISTS ORCAMENTO;
 DROP TABLE IF EXISTS CATALOGO;
 DROP TABLE IF EXISTS ORDEM_SERVICO;
 
+-- Encerrar conexões
+SELECT pg_terminate_backend(pid)
+FROM pg_stat_activity
+WHERE datname = 'trabalhobd'
+AND pid <> pg_backend_pid();
+
+-- Criar tabelas
 CREATE TABLE ORDEM_SERVICO (
     id_os INT PRIMARY KEY,
     id_equipamento INT,
@@ -178,39 +186,64 @@ CREATE TABLE ITENS_PEDIDO (
     FOREIGN KEY (FK_ORCAMENTO_id_orcamento) REFERENCES ORCAMENTO (id_orcamento)
 );
 
+-- Inserir dados em ORDEM_SERVICO
 INSERT INTO ORDEM_SERVICO (id_os, id_equipamento, data_inicio, data_conclusao) VALUES
 (1, 1001, '2023-01-01', '2023-01-10'),
-(2, 1002, '2023-02-01', '2023-02-15');
+(2, 1002, '2023-02-01', '2023-02-15'),
+(3, 1003, '2023-03-01', '2023-03-20'),
+(4, 1004, '2023-04-01', '2023-04-10'),
+(5, 1005, '2023-05-01', '2023-05-15'),
+(6, 1006, '2023-06-01', '2023-06-30');
 
+-- Inserir dados em PEDIDO
 INSERT INTO PEDIDO (id_pedido, data_pedido, data_recebimento, FK_ORDEM_SERVICO_id_os) VALUES
 (1, '2023-01-02', '2023-01-12', 1),
-(2, '2023-02-02', '2023-02-17', 2);
+(2, '2023-02-02', '2023-02-17', 2),
+(3, '2023-03-02', '2023-03-21', 3),
+(4, '2023-04-02', '2023-04-12', 4),
+(5, '2023-05-02', '2023-05-16', 5),
+(6, '2023-06-02', '2023-07-01', 6);
 
+-- Inserir dados em CATALOGO
 INSERT INTO CATALOGO (id_item, descricao, tipo) VALUES
 (1, 'Parafuso', 'Hardware'),
 (2, 'Placa Mãe', 'Hardware'),
-(3, 'Memória RAM', 'Hardware');
+(3, 'Memória RAM', 'Hardware'),
+(4, 'Processador', 'Hardware'),
+(5, 'Fonte de Alimentação', 'Hardware'),
+(6, 'SSD', 'Hardware');
 
+-- Inserir dados em ORCAMENTO
 INSERT INTO ORCAMENTO (id_orcamento, fornecedor, previsao_entrega) VALUES
 (1, 'Fornecedor A', '2023-01-20'),
-(2, 'Fornecedor B', '2023-02-25');
+(2, 'Fornecedor B', '2023-02-25'),
+(3, 'Fornecedor C', '2023-03-30'),
+(4, 'Fornecedor D', '2023-04-15'),
+(5, 'Fornecedor E', '2023-05-20'),
+(6, 'Fornecedor F', '2023-06-25');
 
+-- Inserir dados em ORDEM_COMPRA
 INSERT INTO ORDEM_COMPRA (id_oc, FK_ORCAMENTO_id_orcamento) VALUES
 (1, 1),
-(2, 2);
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6);
 
+-- Inserir dados em ITENS_PEDIDO
 INSERT INTO ITENS_PEDIDO (quantidade, valor, garantia, FK_PEDIDO_id_pedido, FK_ITENS_id_item, FK_ORCAMENTO_id_orcamento) VALUES
 (10, 1.50, 12, 1, 1, 1),
 (5, 200.00, 24, 1, 2, 1),
-(20, 50.00, 24, 2, 3, 2);
-
+(20, 50.00, 24, 2, 3, 2),
+(3, 300.00, 36, 2, 4, 2),
+(8, 150.00, 24, 3, 5, 3),
+(15, 250.00, 36, 3, 6, 3);
 
     1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
         2) script deve ser incluso no template em um arquivo no formato .SQL
              
-        --linha de comando do PostgreSQL 
-        psql -U bxjzvkik -h trabalhobd1 -d restauracaobd1 -f restauracao.sql
-
+     
 
 ### 9   TABELAS E PRINCIPAIS CONSULTAS<br>
 
