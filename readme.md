@@ -123,15 +123,15 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
       
 ### 8   INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) Script das instruções relativas a inclusão de dados
+        a) Script das instruções relativas a inclusão de dados:
    [create-insert.sql](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/create-insert.sql)
 
-1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
-    2) script deve ser incluso no template em um arquivo no formato .SQL
     1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
+   ![backup.png](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/backup.png)
+
         2) script deve ser incluso no template em um arquivo no formato .SQL
              
-     
+   [backup.sql](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/backup.sql)
 
 ### 9   TABELAS E PRINCIPAIS CONSULTAS<br>
 
