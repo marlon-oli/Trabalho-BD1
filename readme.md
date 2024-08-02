@@ -78,8 +78,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
-    
+
     EXEMPLO:
     ORDEM_SERVICO: tabela que armazena as ordens de serviço de todos os equipamentos.
         - id_os: identificador único da ordem de serviço.
