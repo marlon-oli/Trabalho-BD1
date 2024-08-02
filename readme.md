@@ -243,6 +243,12 @@ Saída :
 #### 9.4    CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
+![image](https://github.com/user-attachments/assets/1c6feb84-e981-412e-9717-63086488ad56)
+
+Saída :
+
+![image](https://github.com/user-attachments/assets/7442326f-4114-469a-89f6-7c8798f7446b)
+
 
 ># Marco de Entrega 02: Do item 6. até o item 9.1 (5 PTS) <br>
 
