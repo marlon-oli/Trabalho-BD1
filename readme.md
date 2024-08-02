@@ -43,6 +43,7 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
 ![image](https://github.com/user-attachments/assets/b2de9043-8f4e-45e6-a4f4-fb6a06521c2b)
 
 
+
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
@@ -86,9 +87,7 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
 ># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do esquema lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+![image](https://github.com/user-attachments/assets/7db12b35-e755-4336-8fd2-f0eb45f544ea)
 
 ### 7	MODELO FÍSICO<br>
 	-- Criação da tabela CLIENTE
