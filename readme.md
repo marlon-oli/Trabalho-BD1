@@ -210,8 +210,14 @@ INSERT INTO ITENS_PEDIDO (quantidade, valor, garantia, FK_PEDIDO_id_pedido, FK_I
 
 
 ### 9   TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Usa template da disciplina disponibilizado no Colab.<br>
+
+     Realizando a conexão com o banco de dados:
+     
+     ![image](https://github.com/user-attachments/assets/b4228f39-ffd0-4b31-a27d-390d15c03b4f)
+
+
 #### 9.1    CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+
 
 #### 9.2    CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
