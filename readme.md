@@ -87,7 +87,8 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
 ># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
 
 ### 6	MODELO LÓGICO<br>
-![image](https://github.com/user-attachments/assets/7db12b35-e755-4336-8fd2-f0eb45f544ea)
+![image](https://github.com/user-attachments/assets/d2bd2e74-4050-4851-b290-4490f9e00126)
+
 
 ### 7	MODELO FÍSICO<br>
 	-- Criação da tabela CLIENTE
