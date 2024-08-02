@@ -219,6 +219,51 @@ INSERT INTO ITENS_PEDIDO (quantidade, valor, garantia, FK_PEDIDO_id_pedido, FK_I
 
 #### 9.1    CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
+![image](https://github.com/user-attachments/assets/6cb7a4fc-0926-4367-9622-cbdbf09cca8a)
+
+Saída:
+
+Tabela: ORDEM_SERVICO
+   id_os  id_equipamento data_inicio data_conclusao
+0      1            1001  2023-01-01     2023-01-10
+1      2            1002  2023-02-01     2023-02-15
+
+
+Tabela: PEDIDO
+   id_pedido data_pedido data_recebimento  fk_ordem_servico_id_os
+0          1  2023-01-02       2023-01-12                       1
+1          2  2023-02-02       2023-02-17                       2
+
+
+Tabela: CATALOGO
+   id_item    descricao      tipo
+0        1     Parafuso  Hardware
+1        2    Placa Mãe  Hardware
+2        3  Memória RAM  Hardware
+
+
+Tabela: ORCAMENTO
+   id_orcamento    fornecedor previsao_entrega
+0             1  Fornecedor A       2023-01-20
+1             2  Fornecedor B       2023-02-25
+
+
+Tabela: ORDEM_COMPRA
+   id_oc  fk_orcamento_id_orcamento
+0      1                          1
+1      2                          2
+
+
+Tabela: ITENS_PEDIDO
+   quantidade  valor  garantia  fk_pedido_id_pedido  fk_itens_id_item  \
+0          10    1.5        12                    1                 1   
+1           5  200.0        24                    1                 2   
+2          20   50.0        24                    2                 3   
+
+   fk_orcamento_id_orcamento  
+0                          1  
+1                          1  
+2                          2  
 
 #### 9.2    CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
