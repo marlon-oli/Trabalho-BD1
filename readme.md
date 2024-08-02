@@ -87,9 +87,9 @@ Descrição textual das regras de negócio definidas como um subconjunto do mund
 ># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
 
 ### 6	MODELO LÓGICO<br>
-       a) inclusão do esquema lógico do banco de dados
-       b) verificação de correspondencia com o modelo conceitual 
-       (não serão aceitos modelos que não estejam em conformidade)
+    a) inclusão do esquema lógico do banco de dados
+    b) verificação de correspondencia com o modelo conceitual 
+    (não serão aceitos modelos que não estejam em conformidade)
 	
 ![image](https://github.com/user-attachments/assets/e39ad8a2-1c1a-417c-868c-7e0839884054)
 
