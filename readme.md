@@ -19,7 +19,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
  
 > O cliente necessita inicialmente dos seguintes relatórios:
 
-# 1 - pedidos pendentes:
+##### 1 - pedidos pendentes:
     
     objetivo: fornecer uma visão geral de todos os pedidos pendentes.
 
@@ -28,7 +28,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
         - status
         - previsão de entrega
 
-# 2 - consumo de itens mensal:
+##### 2 - consumo de itens mensal:
 
     objetivo: estimar o consumo mensal de itens para possível planejamento de compras e reavaliação de gastos.
 
@@ -38,7 +38,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
         - quantidade solicitada
         - valor total
 
-# 3 - desempenho dos fornecedores:
+##### 3 - desempenho dos fornecedores:
 
     objetivo: verificar quais fornecedores cumprem com o prazo de entrega e verificar os que entregam em menor tempo.
 
@@ -48,7 +48,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
         - quantidade de dias de atraso
         - média de tempo de entrega (dias)
 
-# 4 - custo total por equipamento:
+##### 4 - custo total por equipamento:
 
     objetivo: fornecer uma visão do custo em manutenção de todos os equipamentos.
 
@@ -57,7 +57,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
         - valor total gasto em manutenções corretivas
         - valor total gasto em manutenções preventivas
 
-# 5 - tempo parado por equipamento:
+##### 5 - tempo parado por equipamento:
 
     objetivo: fornecer a informação de quanto tempo o equipamento ficou parado na oficina em manutenções corretivas e preventivas
 
