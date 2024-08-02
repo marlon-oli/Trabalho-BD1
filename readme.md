@@ -207,6 +207,9 @@ INSERT INTO ITENS_PEDIDO (quantidade, valor, garantia, FK_PEDIDO_id_pedido, FK_I
 
     1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
         2) script deve ser incluso no template em um arquivo no formato .SQL
+             
+        --linha de comando do PostgreSQL 
+        psql -U bxjzvkik -h trabalhobd1 -d restauracaobd1 -f restauracao.sql
 
 
 ### 9   TABELAS E PRINCIPAIS CONSULTAS<br>
