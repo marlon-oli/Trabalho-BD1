@@ -213,7 +213,7 @@ INSERT INTO ITENS_PEDIDO (quantidade, valor, garantia, FK_PEDIDO_id_pedido, FK_I
 
      Realizando a conexão com o banco de dados:
      
-     ![image](https://github.com/user-attachments/assets/b4228f39-ffd0-4b31-a27d-390d15c03b4f)
+   ![Alt text](https://github.com/user-attachments/assets/b4228f39-ffd0-4b31-a27d-390d15c03b4f)
 
 
 #### 9.1    CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
