@@ -1,119 +1,172 @@
-# TRABALHO 01:  Título do Trabalho
+# TRABALHO 01:  Diligenciamento de Pedidos para Manutenção de Equipamentos
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
-segundo_componente_do_grupo:email_segundo_componente@dominio.com<br>
-...<br>
+Jhon Pinho Santos da Silva: jhonpinhosantos@gmail.com<br>
+Lucas Lopes Rosa Maciel: lucaslopes14011@gmail.com<br>
+Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
 
 ### 2.MINI-MUNDO<br>
 
-Descrever o mini-mundo! (Não deve ser maior do que 30 linhas, se necessário resumir para justar) <br>
-Entrevista com o usuário e identificação dos requisitos.(quando for o caso de sistemas com cliente  real)<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
-cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
+> O sistema proposto para o cliente Lucas Rodrigues consiste em atender sua necessidade de controlar e visualizar o andamento dos pedidos de manutenção de seus equipamentos, onde tanto os produtos quanto os serviços são 100% terceirizados. Sendo assim, é necessário armazenar as ordens de serviço dos equipamentos, contendo o número único de identificação do equipamento, a data de início da ordem de serviço e a data de conclusão da mesma. A partir da ordem de serviço, surge um pedido, que é composto por data do pedido, data do recebimento e itens de um catálogo de itens, que possui a descrição e o tipo de cada item. Cada pedido pode resultar em um ou mais orçamentos que guardam as informações de fornecedor, previsão de entrega e status, que estão relacionados com o valor total e garantia de cada item. Os orçamentos podem ou não gerar uma e somente uma ordem de compra cada, onde cada ordem de compra também só se relaciona com um orçamento. É importante frisar que as informações de data de conclusão e data de recebimento inicialmente são nulas, sendo preenchidas somente no momento de conclusão e de recebimento.
 
-> O sistema proposto para a "Devcom Projetos conterá as informacões aqui detalhadas. Dos Projetos serão armazenados o número, nome e cidade. Dos Departamentos serão armazenados o número e nome. O cliente destacou que cada projeto pode ter vários departamentos auxiliando no seu desenvolvimento, e cada departamento pode estar envolvido em vários projetos. Os dados relativos aos empregados que serão armazenados são: rg, nome, cpf, salário, data inicial do salario e supervisor de cada empregado. É importante destacar que cada empregado pode ser supervisionado por outro empregado, e obrigatoriamente deve estar alocado a um único departamento, mas pode gerenciar vários departamentos ou não gerenciar nenhum. Um empregado também pode participar de vários projetos, caso seja necessário, mas não precisa obrigatoriamente estar alocado em algum projeto. Com relação aos dependentes serão armazenadas as informações de nome do dependente, data de nascimento, sexo e grau de parentesco. Cada empregado pode ter vários dependentes, mas um dependente esta associado apenas a um único empregado. Com relação ao histórico de salário devemos armazenar as informações de valor do salário, data de início do salário no período e data final do salário no período. É importante lembrar que cada funcionario pode ter diversos eventos de histórico de salário associados a ele visto que este dado pode ser alterado várias vezes. 
 
 ### 3.PERGUNTAS A SEREM RESPONDIDAS<br>
-#### 3.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
+ 
+> O cliente necessita inicialmente dos seguintes relatórios:
+
+# 1 - pedidos pendentes:
     
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
-* Relatório relativo aos os supervisores e supervisionados. O resultado deve conter o nome do supervisor e nome do supervisionado além da quantidade total de horas que cada supervisionado tem alocada aos projetos existentes na empresa.
-* Relatorio que mostre para cada linha obtida o nome do departamento, o valor individual de cada salario existente no  departamento e a média geral de salarios dentre todos os empregados. Os resultados devem ser apresentados ordenados por departamento.
-* Relatório que mostre as informações relacionadas a todos empregados de empresa (sem excluir ninguém). As linhas resultantes devem conter informações sobre: rg, nome, salario do empregado, data de início do salario atual, nomes dos projetos que participa, quantidade de horas e localização nos referidos projetos, numero e nome dos departamentos aos quais está alocado, informações do historico de salário como inicio, fim, e valores de salarios antigos que foram inclusos na referida tabela (caso possuam informações na mesma), além de todas informações relativas aos dependentes. 
->> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo.  <br>  c) Observe que para entregar os relatórios propostos, todos os atributos necessários nos relatórios deverão existir ou derivar de atributos existentes.
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa. 
+    objetivo: fornecer uma visão geral de todos os pedidos pendentes.
+
+    atributos:
+        - pedido
+        - status
+        - previsão de entrega
+
+# 2 - consumo de itens mensal:
+
+    objetivo: estimar o consumo mensal de itens para possível planejamento de compras e reavaliação de gastos.
+
+    atributos: 
+        (filtrados por mês)
+        - item
+        - quantidade solicitada
+        - valor total
+
+# 3 - desempenho dos fornecedores:
+
+    objetivo: verificar quais fornecedores cumprem com o prazo de entrega e verificar os que entregam em menor tempo.
+
+    atributos:
+        - fornecedor
+        - quantidade de ordens de compra
+        - quantidade de dias de atraso
+        - média de tempo de entrega (dias)
+
+# 4 - custo total por equipamento:
+
+    objetivo: fornecer uma visão do custo em manutenção de todos os equipamentos.
+
+    atributos:
+        - equipamento
+        - valor total gasto em manutenções corretivas
+        - valor total gasto em manutenções preventivas
+
+# 5 - tempo parado por equipamento:
+
+    objetivo: fornecer a informação de quanto tempo o equipamento ficou parado na oficina em manutenções corretivas e preventivas
+
+    atributos:
+        - equipamento
+        - tempo total em manutenção corretiva
+        - tempo total em manutenção preventiva
 
     
 ### 5.MODELO CONCEITUAL<br>
-    A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
-        * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-    C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
-    D) Qualidade e Clareza
-        Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas (Aplicar os conceitos de normalização abordados).   
-        
-![Alt text](https://github.com/discipbd1/trab01/blob/master/images/concept_sample.png?raw=true "Modelo Conceitual")
-    
-    
+       
+![Alt text](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/diligenciamento%20de%20pedidos%20manutencao%20(conceitual)%20print.png?raw=true "Modelo Conceitual")
+   
+
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
     [Grupo02]: [Nomes dos que participaram na avaliação]
+
 
 #### 5.2 Descrição dos dados 
     [objeto]: [descrição do objeto]
     
     EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    ORDEM_SERVICO: tabela que armazena as ordens de serviço de todos os equipamentos.
+        - id_os: identificador único da ordem de serviço.
+        - id_equipamento: identificador único do equipamento que necessita de manutenção.
+        - data_inicio: data de abertura da ordem de serviço.
+        - data_conclusa0: data de conclusão da ordem de serviço.
+
+    PEDIDO: tabela que armazena os pedidos das ordens de serviço.
+        - id_pedido: identificador único do pedido.
+        - data_pedido: data em que o pedido foi emitido.
+        - data_recebimento: data em que todos os itens do pedido foram recebidos ou realizados, em caso de serviços.
+
+    CATALOGO: tabela que possui todos os itens que podem ser pedidos.
+        - id_item: identificador único do item.
+        - descricao: descrição do item.
+        - tipo: tipo do item (ex: peças, serviços, etc.)
+
+    ORCAMENTO: tabela que possui todos os orçamentos gerados a partir de pedidos.
+        - id_orcamento: identificador único de cada orçamento.
+        - fornecedor: nome do fornecedor dos itens relacionados a esse orçamento.
+        - previsão de entrega: previsão de entrega de todos os itens relacionados a esse orçamento.
+
+    ITENS_PEDIDO: tabela que contém informações a respeito dos itens que relacionam as tabelas CATALOGO, ORCAMENTO E PEDIDO.
+        - quantidade: quantidade do respectivo item, de acordo com o pedido relacionado.
+        - valor: valor do respectivo item, de acordo com o fornecedor do orçamento relacionado.
+        - garantia: garantia do respectivo item, de acordo com o fornecedor do orçamento relacionado.
+
+    ORDEM_COMPRA: tabela que contém todos os orçamentos que foram aprovados e se transformaram em uma ordem de compra.
+        -id_oc: identificador único de cada ordem de compra.
+
 
 ># Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br> 
 
-### 6	MODELO LÓGICO<br>
-        a) inclusão do esquema lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+### 6   MODELO LÓGICO<br>
 
-### 7	MODELO FÍSICO<br>
+![Alt text](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/diligenciamento%20de%20pedidos%20manutencao%20(logico)%20print.png?raw=true "Modelo Lógico")
+
+
+### 7   MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
         (criação de tabelas, alterações, etc..) 
 
       
-### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+### 8   INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) Script das instruções relativas a inclusão de dados 
-	Requisito mínimo: (Script dev conter: Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
+    Requisito mínimo: (Script dev conter: Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
         OBS
-	1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
+    1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
         2) script deve ser incluso no template em um arquivo no formato .SQL
 
 
-### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
+### 9   TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Usa template da disciplina disponibilizado no Colab.<br>
-#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+#### 9.1    CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
-#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+#### 9.2    CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
+#### 9.3    CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
-#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
+#### 9.4    CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
 
 ># Marco de Entrega 02: Do item 6. até o item 9.1 (5 PTS) <br>
 
-#### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+#### 9.5    INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     a) Criar minimo 3 de exclusão
     b) Criar minimo 3 de atualização
 
-#### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
+#### 9.6    CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
 
-#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+#### 9.7    CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
 
-#### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
+#### 9.8    CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
 
-#### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
+#### 9.9    CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 
-#### 9.10	SUBCONSULTAS (Mínimo 4)<br>
+#### 9.10   SUBCONSULTAS (Mínimo 4)<br>
      a) Criar minimo 1 envolvendo GROUP BY
      b) Criar minimo 1 envolvendo algum tipo de junção
 
@@ -127,7 +180,7 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 
     
 
-### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
+### 11  AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
 #### a) Modelo (pecha kucha)<br>
 #### b) Tempo de apresentação 6:40 
@@ -174,5 +227,3 @@ http://www.sis4.com/brModelo/download.html
 
 Link para curso de GIT<br>
 ![https://www.youtube.com/curso_git](https://www.youtube.com/playlist?list=PLo7sFyCeiGUdIyEmHdfbuD2eR4XPDqnN2?raw=true "Title")
-
-
