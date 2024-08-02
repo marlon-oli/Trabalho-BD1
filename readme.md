@@ -223,49 +223,17 @@ INSERT INTO ITENS_PEDIDO (quantidade, valor, garantia, FK_PEDIDO_id_pedido, FK_I
 
 Saída:
 
-Tabela: ORDEM_SERVICO
-   id_os  id_equipamento data_inicio data_conclusao
-0      1            1001  2023-01-01     2023-01-10
-1      2            1002  2023-02-01     2023-02-15
+![image](https://github.com/user-attachments/assets/bbe4f7a4-719e-4352-827c-707f14c6db54)
 
-
-Tabela: PEDIDO
-   id_pedido data_pedido data_recebimento  fk_ordem_servico_id_os
-0          1  2023-01-02       2023-01-12                       1
-1          2  2023-02-02       2023-02-17                       2
-
-
-Tabela: CATALOGO
-   id_item    descricao      tipo
-0        1     Parafuso  Hardware
-1        2    Placa Mãe  Hardware
-2        3  Memória RAM  Hardware
-
-
-Tabela: ORCAMENTO
-   id_orcamento    fornecedor previsao_entrega
-0             1  Fornecedor A       2023-01-20
-1             2  Fornecedor B       2023-02-25
-
-
-Tabela: ORDEM_COMPRA
-   id_oc  fk_orcamento_id_orcamento
-0      1                          1
-1      2                          2
-
-
-Tabela: ITENS_PEDIDO
-   quantidade  valor  garantia  fk_pedido_id_pedido  fk_itens_id_item  \
-0          10    1.5        12                    1                 1   
-1           5  200.0        24                    1                 2   
-2          20   50.0        24                    2                 3   
-
-   fk_orcamento_id_orcamento  
-0                          1  
-1                          1  
-2                          2  
 
 #### 9.2    CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+
+![image](https://github.com/user-attachments/assets/a32ebd5f-0e14-4b14-bbdc-8bae369eb51a)
+
+Saída : 
+
+![image](https://github.com/user-attachments/assets/3b93976f-2687-4951-b37a-338f31c6549a)
+
 
 #### 9.3    CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
