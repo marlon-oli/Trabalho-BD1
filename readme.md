@@ -73,7 +73,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
    
 
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
+    [Grupo 01]: [Daniel Oliveira]
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 
