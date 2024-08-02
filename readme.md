@@ -123,9 +123,88 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
       
 ### 8   INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) Script das instruções relativas a inclusão de dados 
-    Requisito mínimo: (Script dev conter: Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
-        OBS
+        a) Script das instruções relativas a inclusão de dados
+        
+DROP TABLE IF EXISTS ITENS_PEDIDO;
+DROP TABLE IF EXISTS ORDEM_COMPRA;
+DROP TABLE IF EXISTS PEDIDO;
+DROP TABLE IF EXISTS ORCAMENTO;
+DROP TABLE IF EXISTS CATALOGO;
+DROP TABLE IF EXISTS ORDEM_SERVICO;
+
+CREATE TABLE ORDEM_SERVICO (
+    id_os INT PRIMARY KEY,
+    id_equipamento INT,
+    data_inicio DATE,
+    data_conclusao DATE
+);
+
+CREATE TABLE PEDIDO (
+    id_pedido INT PRIMARY KEY,
+    data_pedido DATE,
+    data_recebimento DATE,
+    FK_ORDEM_SERVICO_id_os INT UNIQUE,
+    FOREIGN KEY (FK_ORDEM_SERVICO_id_os) REFERENCES ORDEM_SERVICO (id_os)
+);
+
+CREATE TABLE CATALOGO (
+    id_item INT PRIMARY KEY,
+    descricao VARCHAR,
+    tipo VARCHAR
+);
+
+CREATE TABLE ORCAMENTO (
+    id_orcamento INT PRIMARY KEY,
+    fornecedor VARCHAR,
+    previsao_entrega DATE
+);
+
+CREATE TABLE ORDEM_COMPRA (
+    id_oc INT PRIMARY KEY,
+    FK_ORCAMENTO_id_orcamento INT UNIQUE,
+    FOREIGN KEY (FK_ORCAMENTO_id_orcamento) REFERENCES ORCAMENTO (id_orcamento)
+);
+
+CREATE TABLE ITENS_PEDIDO (
+    quantidade INT,
+    valor DOUBLE PRECISION,
+    garantia INT,
+    FK_PEDIDO_id_pedido INT,
+    FK_ITENS_id_item INT,
+    FK_ORCAMENTO_id_orcamento INT,
+    PRIMARY KEY (FK_PEDIDO_id_pedido, FK_ITENS_id_item, FK_ORCAMENTO_id_orcamento),
+    FOREIGN KEY (FK_PEDIDO_id_pedido) REFERENCES PEDIDO (id_pedido),
+    FOREIGN KEY (FK_ITENS_id_item) REFERENCES CATALOGO (id_item),
+    FOREIGN KEY (FK_ORCAMENTO_id_orcamento) REFERENCES ORCAMENTO (id_orcamento)
+);
+
+INSERT INTO ORDEM_SERVICO (id_os, id_equipamento, data_inicio, data_conclusao) VALUES
+(1, 1001, '2023-01-01', '2023-01-10'),
+(2, 1002, '2023-02-01', '2023-02-15');
+
+INSERT INTO PEDIDO (id_pedido, data_pedido, data_recebimento, FK_ORDEM_SERVICO_id_os) VALUES
+(1, '2023-01-02', '2023-01-12', 1),
+(2, '2023-02-02', '2023-02-17', 2);
+
+INSERT INTO CATALOGO (id_item, descricao, tipo) VALUES
+(1, 'Parafuso', 'Hardware'),
+(2, 'Placa Mãe', 'Hardware'),
+(3, 'Memória RAM', 'Hardware');
+
+INSERT INTO ORCAMENTO (id_orcamento, fornecedor, previsao_entrega) VALUES
+(1, 'Fornecedor A', '2023-01-20'),
+(2, 'Fornecedor B', '2023-02-25');
+
+INSERT INTO ORDEM_COMPRA (id_oc, FK_ORCAMENTO_id_orcamento) VALUES
+(1, 1),
+(2, 2);
+
+INSERT INTO ITENS_PEDIDO (quantidade, valor, garantia, FK_PEDIDO_id_pedido, FK_ITENS_id_item, FK_ORCAMENTO_id_orcamento) VALUES
+(10, 1.50, 12, 1, 1, 1),
+(5, 200.00, 24, 1, 2, 1),
+(20, 50.00, 24, 2, 3, 2);
+
+
     1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
         2) script deve ser incluso no template em um arquivo no formato .SQL
 
