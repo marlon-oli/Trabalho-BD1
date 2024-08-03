@@ -119,8 +119,8 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
 ### 7   MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
-
+        
+ [create.sql](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/create.sql)
       
 ### 8   INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) Script das instruções relativas a inclusão de dados:
