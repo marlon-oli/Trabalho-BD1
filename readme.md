@@ -135,28 +135,14 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
 ### 9   TABELAS E PRINCIPAIS CONSULTAS<br>
 
-     Realizando a conexão com o banco de dados:
-     
-   ![image](https://github.com/user-attachments/assets/45c8b657-852d-4af9-a101-1ebd92b086bd)
 
 
 
 #### 9.1    CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
-![image](https://github.com/user-attachments/assets/6cb7a4fc-0926-4367-9622-cbdbf09cca8a)
-
-Saída:
-
-![image](https://github.com/user-attachments/assets/bbe4f7a4-719e-4352-827c-707f14c6db54)
 
 
 #### 9.2    CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-
-![image](https://github.com/user-attachments/assets/a32ebd5f-0e14-4b14-bbdc-8bae369eb51a)
-
-Saída : 
-
-![image](https://github.com/user-attachments/assets/3b93976f-2687-4951-b37a-338f31c6549a)
 
 
 #### 9.3    CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
@@ -179,12 +165,6 @@ Saída :
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
     
-![image](https://github.com/user-attachments/assets/1c6feb84-e981-412e-9717-63086488ad56)
-
-Saída :
-
-![image](https://github.com/user-attachments/assets/7442326f-4114-469a-89f6-7c8798f7446b)
-
 #### 9.7    CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
 
