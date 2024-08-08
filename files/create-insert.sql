@@ -172,3 +172,17 @@ INSERT INTO ITENS_PEDIDO (quantidade, valor, garantia, FK_PEDIDO_id_pedido, FK_I
 (14, 100.00, 24, 13, 4, 3),
 (6, 75.00, 18, 14, 5, 4),
 (13, 250.00, 24, 15, 6, 5);
+
+INSERT INTO ORDEM_SERVICO (id_os, id_equipamento, data_inicio, data_conclusao) VALUES
+(16, 1011, '2023-11-01', NULL),
+(17, 1012, '2023-12-01', NULL),
+(18, 1013, '2024-01-01', NULL),
+(19, 1014, '2024-02-01', NULL),
+(20, 1015, '2024-03-01', NULL);
+
+INSERT INTO PEDIDO (id_pedido, data_pedido, data_recebimento, FK_ORDEM_SERVICO_id_os) VALUES
+(16, '2023-11-02', NULL, 16),
+(17, '2023-12-02', NULL, 17),
+(18, '2024-01-02', NULL, 18),
+(19, '2024-02-02', NULL, 19),
+(20, '2024-03-02', NULL, 20);
