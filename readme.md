@@ -74,7 +74,6 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
 #### 5.1 Validação do Modelo Conceitual
     [Grupo 01]: [Daniel Oliveira]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
 
 
 #### 5.2 Descrição dos dados 
@@ -183,11 +182,8 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
-#### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
-#### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
-#### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
+#### ![Alt text](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/relatorios%20e%20graficos.ipynb?raw=true "Modelo Lógico")
 
-    
 
 ### 11  AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
