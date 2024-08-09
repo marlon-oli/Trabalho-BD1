@@ -182,7 +182,7 @@ Marlon de Oliveira Silva: marlonoliveira639@gmail.com<br>
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
-#### ![Alt text](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/relatorios%20e%20graficos.ipynb?raw=true "Modelo Lógico")
+#### ![relatórios e gráficos](https://github.com/marlon-oli/Trabalho-BD1/blob/main/files/relatorios-e-graficos.ipynb)
 
 
 ### 11  AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
